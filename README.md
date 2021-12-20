@@ -13,6 +13,9 @@ And here's what it looks like in the horizontal direction:
   <img src="https://user-images.githubusercontent.com/49384703/146814624-d2c77512-7b5b-4372-bc69-8e41456bd2d1.gif" width=400> 
 </p>
 
+Finally, here's what a full demonstration looks like.
 
-<!-- ![porschehoriz](https://user-images.githubusercontent.com/49384703/146814624-d2c77512-7b5b-4372-bc69-8e41456bd2d1.gif) -->
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49384703/146818016-c7b69df1-af78-4cda-a024-efa8989120d4.gif" width=400> 
+</p>
 
