@@ -5,17 +5,17 @@ MATLAB implementation of dynamic seam-carving from SIGGRAPH 2007 paper.
 
 Here's a demonstration of vertically carving seams:
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49384703/146812093-9c98927b-7b60-413f-871b-80f76fa77a16.gif" width=400> 
+  <img src="https://user-images.githubusercontent.com/49384703/146843024-f3e40187-f72e-43cb-8b32-b3fa738da04b.gif" width=400> 
 </p>
 
 And here's what it looks like in the horizontal direction:
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49384703/146814624-d2c77512-7b5b-4372-bc69-8e41456bd2d1.gif" width=400> 
+  <img src="https://user-images.githubusercontent.com/49384703/146843037-89a992ed-b6d1-4c71-bda7-13076cc5bef8.gif" width=400> 
 </p>
 
 Finally, here's what a full demonstration looks like.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49384703/146818016-c7b69df1-af78-4cda-a024-efa8989120d4.gif" width=400> 
+  <img src="https://user-images.githubusercontent.com/49384703/146843044-55c62bd1-e1bc-4f1a-a811-46f304c1bfb5.gif" width=400> 
 </p>
 
