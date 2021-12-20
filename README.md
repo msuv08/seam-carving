@@ -16,14 +16,6 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 - Live seam-carving
 - Dynamic programming in 8-connected pixel paths
 - Identification of important information
-
-  
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
   
 ## Demo
 
@@ -50,3 +42,7 @@ To test this project run
 ```MATLAB
 >> /seam-carving/a1.m
 ```
+
+## Acknowledgements
+
+ - Avidan, S., & Shamir, A. (2007). Seam carving for content-aware image resizing. In ACM SIGGRAPH 2007 papers [(pp. 10-es)](https://faculty.idc.ac.il/arik/SCWeb/imret/index.html).
