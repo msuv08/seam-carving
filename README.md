@@ -1,9 +1,11 @@
 
 # Seam Carving for Content-Aware Image Resizing (CAIR)
 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 This is a reimplementation of the seam-carving algorithm described in a 2007 ACM SIGGRAPH paper from S. Avidan and S. Amir.
 
-## Full README still under construction 🚧. 
+## 🚧 Full README still under construction 🚧
 
 ## License
 
