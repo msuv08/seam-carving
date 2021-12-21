@@ -14,10 +14,30 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
   
 ## Features
 
-- Energy Heatmaps
-- Live seam-carving
-- Dynamic programming in 8-connected pixel paths
-- Identification of important information
+- [X] Resize an image both horizontally & vertically
+- [X] Use of dynamic programming in 8-connected pixel paths
+- [X] Sobel operator used for better gradient thresholding
+- [X] Multidirectional energy maps
+- [X] Seam-by-seam carving live output
+
+## How does it work?
+- Gradients are first computed on the input image for the purpose of edge detection. This is the preliminary step before a heatmap of an image is generated.
+- THe next 
+
+|         Input Image      |         Gradient Map      
+:-------------------------:|:-------------------------:|
+<img width="800" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png"> |  <img width="800" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png"> 
+
+|        Horizontal Heatmap     |        Vertical Heatmap
+:-------------------------:|:-------------------------:|
+| <img width="800" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png"> | <img width="800" alt="vert" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png">
+
+
+<!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
+<img width="886" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png">
+<img width="529" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png">
+<img width="886" alt="vert" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png"> -->
+
   
 ## Demo
 
