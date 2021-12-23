@@ -21,12 +21,16 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 - [X] Seam-by-seam carving live output
 
 ## How does it work?
-- Gradients are first computed on the input image for the purpose of edge detection. This is the preliminary step before a heatmap of an image is generated.
-- THe next 
+- Gradients are first computed using the Sobel operator on the input image for the purpose of edge detection. This is the preliminary step and allows for identification of objects, which will later be used to determine optimal pixel paths.
+- By taking derivatives between adjacent pixels, this algorithm is able to identify sharp changes in pixel values. To accomplish this, a Sobel filter is applied through convolution on the input image. Here's an animation:
+
+#### 🚨 Insert animation of convolution filter here 🚨
 
 |         Input Image      |         Gradient Map      
 :-------------------------:|:-------------------------:|
 <img width="800" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png"> |  <img width="800" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png"> 
+
+- Next, heatmaps are computed
 
 |        Horizontal Heatmap     |        Vertical Heatmap
 :-------------------------:|:-------------------------:|
