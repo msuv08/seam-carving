@@ -50,8 +50,32 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 
 - These heatmaps showcase the cumulative minimum energy for any pixel at (i,j) in either the horizontal or vertical directions. In the above images, a bottom-up matrix has been generated that considers the energies of all 3 neighboring pixels, summing energies as the image is parsed.
 
+- For generating an energy map in the horizontal direction, this formula is used for any (i,j) pixel:
+<div align="center">
+  
+```MATLAB
+M(i,j) = Energy(i,j) + min(M(i-1,j-1), M(i,j-1), M(i+1,j-1))
+```
+  
+</div>
+
+- And, for the vertical direction, we use the below formula for all (i,j) pixels:
+<div align="center">
+  
+```MATLAB
+M(i,j) = Energy(i,j) + min(M(i-1,j-1), M(i-1,j), M(i-1,j+1)) 
+```
+  
+</div>
+
+
 ### Optimal Pixel Paths
 - After the low-cost energy matrix is generated, pixel paths can be computed through the image, defined to be 'low-energy' seams.
+
+
+
+
+
 
 <!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
 <img width="886" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png">
