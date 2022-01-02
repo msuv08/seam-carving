@@ -70,11 +70,48 @@ M(i,j) = Energy(i,j) + min(M(i-1,j-1), M(i-1,j), M(i-1,j+1))
 
 
 ### Optimal Pixel Paths
-- After the low-cost energy matrix is generated, pixel paths can be computed through the image, defined to be 'low-energy' seams.
+- After the low-cost energy matrix is generated, pixel paths can be computed through the image, defined to be 'low-energy' seams. Let's walkthrough an example of finding a pixel path in the vertical direction. We start with E, our energy matrix:
+
+<div align="center">
+  
+```python
+      1    3    0
+E  =  2    8    9
+      5    2    6
+```
+  
+</div>
+
+- Then, the M (low-cost energy) matrix is generated as a heatmap:
+<div align="center">
+  
+```python
+      1     3     0
+M  =  3     8     9
+      8     5    14
+```
+</div>
+
+- Finally, a pixel path is identified using a low-cost approach from the bottom-up:
+  
+<div align="center">
+  
+```python
+      [1]   3     0
+M  =  [3]   8     9
+       8   [5]   14
+```
+  
+</div>
+
+- This leaves us with our optimal path, `5 -> 3 -> 1` in the M matrix, which is `2 -> 2 -> 1` in the E matrix. From our original input image, the first vertical seam to be removed would look like this: 
+
+<div align = "center">
+<img width="450" src="https://user-images.githubusercontent.com/49384703/147892253-3f2c8bce-1c58-4ec1-b120-db9259994a65.png">
+</div>
 
 
-
-
+### Dynamic Programming
 
 
 <!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
