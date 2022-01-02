@@ -37,11 +37,8 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
   
 </div>
 
-### Optimal Pixel Paths
-- Once a gradient map has been produced, the process to identify pixel paths is made easier. The next step is generating heat maps, in both the vertical and horizontal directions
-- 
-- The simple Sobel convolution filter helped us identify "important" areas in our input image, which will consequently be ignored by the seam-carving algorithm.
-- Since pixel paths will be continuos, they will be defined as having 3 ways to branch out, better known as an 8-connected path.
+### Generating Low-Cost Energy Matrices
+- Once a gradient map has been produced, the process to identify pixel paths is made easier. The next step is generating heatmaps, in both the vertical and horizontal directions, to represent the low-cost energy matrix.
 
 <div align="center">
 
@@ -50,6 +47,11 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 | <img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png"> | <img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png">
 
 </div>
+
+- These heatmaps showcase the cumulative minimum energy for any pixel at (i,j) in either the horizontal or vertical directions. In the above images, a bottom-up matrix has been generated that considers the energies of all 3 neighboring pixels, summing energies as the image is parsed.
+
+### Optimal Pixel Paths
+- After the low-cost energy matrix is generated, pixel paths can be computed through the image, defined to be 'low-energy' seams.
 
 <!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
 <img width="886" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png">
