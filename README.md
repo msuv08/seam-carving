@@ -3,7 +3,7 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![MATLAB](https://img.shields.io/badge/MATLAB-R2021a-orange)](https://www.mathworks.com/help/matlab/release-notes.html) [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
 
-This is a reimplementation of the seam-carving algorithm described in a 2007 ACM SIGGRAPH paper from S. Avidan and S. Amir.
+This is a reimplementation of the seam-carving algorithm described in a 2007 ACM SIGGRAPH paper from S. Avidan and S. Amir. 
 
 ## 🚧 Full README still under construction 🚧
 
@@ -18,15 +18,16 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 - [X] Use of dynamic programming in 8-connected pixel paths
 - [X] Sobel operator used for better gradient thresholding
 - [X] Multidirectional energy maps
-- [X] Seam-by-seam carving live output
+- [X] Live seam-by-seam carving output
 
 ## How does it work?
-- Gradients are first computed using the Sobel operator on the input image for the purpose of edge detection. This is the preliminary step and allows for identification of objects, which will later be used to determine optimal pixel paths.
-- By taking derivatives between adjacent pixels, this algorithm is able to identify sharp changes in pixel values. To accomplish this, a Sobel filter is applied through convolution on the input image. Here's the convolution demonstrated on a 9x9 grid:
+
+### Calculating the Energy of an Image
+- Gradients are first computed using the Sobel operator on the input image for the purpose of energy calculation. By taking derivatives between adjacent pixels, this algorithm is able to identify sharp changes in pixel values, better defined as 'edges'. A Sobel filter is applied through convolution to accomplish this on the input image, demonstrated on a 3x3 grid:
 
 <div align="center"> <img width="300" src="https://user-images.githubusercontent.com/49384703/147888088-678ce123-5155-4497-a0bd-8e124d5b7578.gif"> </div>
 
-- Shown below is the result of mass-applying the convolution across the whole input image to generate a gradient map:
+-  This is the preliminary step and allows for rough identification of objects, which will later be used to determine optimal pixel paths. Shown below is the result of mass-applying the convolution across the whole input image to generate a gradient map:
 
 <div align="center">
   
@@ -36,7 +37,10 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
   
 </div>
 
-- Once we have a gradient map, the process to identify pixel paths is made easier. The simple Sobel convolution filter helped us identify "important" areas in our input image, which will consequently be ignored by the seam-carving algorithm.
+### Optimal Pixel Paths
+- Once a gradient map has been produced, the process to identify pixel paths is made easier. The next step is generating heat maps, in both the vertical and horizontal directions
+- 
+- The simple Sobel convolution filter helped us identify "important" areas in our input image, which will consequently be ignored by the seam-carving algorithm.
 - Since pixel paths will be continuos, they will be defined as having 3 ways to branch out, better known as an 8-connected path.
 
 <div align="center">
