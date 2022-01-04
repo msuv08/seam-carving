@@ -33,7 +33,7 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
   
 |         Input Image      |         Gradient Map      
 :-------------------------:|:-------------------------:|
-<img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png"> |  <img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png"> 
+<img width="500" height="300" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png"> |  <img width="500" height="300" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png"> 
   
 </div>
 
@@ -44,7 +44,7 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 
 |        Horizontal Heatmap     |        Vertical Heatmap
 :-------------------------:|:-------------------------:|
-| <img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png"> | <img width="600" height="300" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png">
+| <img width="500" height="300" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png"> | <img width="500" height="300" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png">
 
 </div>
 
@@ -119,17 +119,20 @@ M  =  [3]   8     9
   
 ## Demo
 
-Here's a demonstration of vertically carving seams. Notice how it carves around the Porsche 911, removing low-energy paths:
+### Image Width Reduction
+- Here's a demonstration of vertically carving seams. Notice how it carves around the Porsche 911, removing low-energy paths:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/49384703/146843024-f3e40187-f72e-43cb-8b32-b3fa738da04b.gif" width=400> 
 </p>
 
-And here's what it looks like in the horizontal direction:
+### Image Height Reduction
+- And here's what it looks like in the horizontal direction:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/49384703/146843037-89a992ed-b6d1-4c71-bda7-13076cc5bef8.gif" width=400> 
 </p>
 
-Finally, here's what a full demonstration looks like.
+### Image Width and Height Reduction
+- Finally, here's what carving seams in both the horizontal and vertical directions looks like:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/49384703/146843044-55c62bd1-e1bc-4f1a-a811-46f304c1bfb5.gif" width=400> 
@@ -140,16 +143,19 @@ Let's look at some more naive (crop) resizes vs CAIR.
 
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
-<img width="1000" height="250" src="https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png"> 
+<img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png"> 
+
 
 
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
-<img width="1000" height="250" src="https://user-images.githubusercontent.com/49384703/148002812-74b35b42-7ed2-49bc-a5e1-bb698b3f10ec.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002810-663d1bc6-89a2-4b19-b88d-3bd3d21620c8.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002803-c41fe785-3cdb-4d71-bb6f-deec45123c0e.png"> 
+<img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148002812-74b35b42-7ed2-49bc-a5e1-bb698b3f10ec.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002810-663d1bc6-89a2-4b19-b88d-3bd3d21620c8.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002803-c41fe785-3cdb-4d71-bb6f-deec45123c0e.png"> 
 
-<!-- <img width="645" alt="960cair" src="https://user-images.githubusercontent.com/49384703/148002803-c41fe785-3cdb-4d71-bb6f-deec45123c0e.png">
-<img width="666" alt="960wave" src="https://user-images.githubusercontent.com/49384703/148002810-663d1bc6-89a2-4b19-b88d-3bd3d21620c8.png">
-<img width="958" alt="waves" src="https://user-images.githubusercontent.com/49384703/148002812-74b35b42-7ed2-49bc-a5e1-bb698b3f10ec.png"> -->
+
+
+|         Input Image      |         Naive Resize      | CAIR    
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148130798-c10148c9-49a5-46fe-bc98-e1a8e234d6fc.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148131048-5d406603-43a0-4d1a-a57a-697c567c4646.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148130791-8d045cfd-8618-4e27-bad4-7caf75df087d.png"> 
 
 
 ## Deployment
