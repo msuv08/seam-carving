@@ -155,8 +155,19 @@ Let's look at some more naive (crop) resizes vs CAIR.
 
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
-<img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148130798-c10148c9-49a5-46fe-bc98-e1a8e234d6fc.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148131048-5d406603-43a0-4d1a-a57a-697c567c4646.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148130791-8d045cfd-8618-4e27-bad4-7caf75df087d.png"> 
+<img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148139327-9760c070-7480-4759-b0a9-c46850632cc1.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148131048-5d406603-43a0-4d1a-a57a-697c567c4646.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148130791-8d045cfd-8618-4e27-bad4-7caf75df087d.png"> 
 
+For visualization purposes, here are the above images overlaid with all the seams that were removed:
+
+|         Boat Sunset    |        Swimmer    | Austin, TX
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png"> |  <img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139247-9fe91498-636a-4b20-85f6-00b39d96bd1d.png"> |  <img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png"> 
+
+<!-- <img width="510" alt="austinseams" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png">
+<img width="744" alt="boatseams" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png">
+<img width="956" alt="waveseams" src="g"> -->
+
+<!-- <img width="509" alt="fullaustin" src="https://user-images.githubusercontent.com/49384703/148139327-9760c070-7480-4759-b0a9-c46850632cc1.png"> -->
 
 ## Deployment
 
