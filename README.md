@@ -141,10 +141,15 @@ Let's look at some more naive (crop) resizes vs CAIR.
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img width="1000" height="250" src="https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png"> 
-<!-- 
-![750boat](https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png)
-![naive750boat](https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png)
-![originalboat](https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png) -->
+
+
+|         Input Image      |         Naive Resize      | CAIR    
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img width="1000" height="250" src="https://user-images.githubusercontent.com/49384703/148002812-74b35b42-7ed2-49bc-a5e1-bb698b3f10ec.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002810-663d1bc6-89a2-4b19-b88d-3bd3d21620c8.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148002803-c41fe785-3cdb-4d71-bb6f-deec45123c0e.png"> 
+
+<!-- <img width="645" alt="960cair" src="https://user-images.githubusercontent.com/49384703/148002803-c41fe785-3cdb-4d71-bb6f-deec45123c0e.png">
+<img width="666" alt="960wave" src="https://user-images.githubusercontent.com/49384703/148002810-663d1bc6-89a2-4b19-b88d-3bd3d21620c8.png">
+<img width="958" alt="waves" src="https://user-images.githubusercontent.com/49384703/148002812-74b35b42-7ed2-49bc-a5e1-bb698b3f10ec.png"> -->
 
 
 ## Deployment
