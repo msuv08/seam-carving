@@ -59,7 +59,7 @@ M(i,j) = Energy(i,j) + min(M(i-1,j-1), M(i,j-1), M(i+1,j-1))
   
 </div>
 
-- And, for the vertical direction, we use the below formula for all (i,j) pixels:
+- And, for the vertical direction, the below formula is used for all (i,j) pixels:
 <div align="center">
   
 ```MATLAB
@@ -69,7 +69,7 @@ M(i,j) = Energy(i,j) + min(M(i-1,j-1), M(i-1,j), M(i-1,j+1))
 </div>
 
 
-### Optimal Pixel Paths
+### Optimal Pixel Paths Using Dynamic Programming
 - After the low-cost energy matrix is generated, pixel paths can be computed through the image, defined to be 'low-energy' seams. Let's walkthrough an example of finding a pixel path in the vertical direction. We start with E, our energy matrix:
 
 <div align="center">
@@ -82,7 +82,7 @@ E  =  2    8    9
   
 </div>
 
-- Then, the M (low-cost energy) matrix is generated as a heatmap:
+- Then, the M (low-cost energy) matrix is generated as a heatmap, with the aforementioned M functions:
 <div align="center">
   
 ```python
@@ -111,9 +111,6 @@ M  =  [3]   8     9
 </div>
 
 
-### Dynamic Programming
-
-
 <!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
 <img width="886" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png">
 <img width="529" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png">
@@ -122,7 +119,7 @@ M  =  [3]   8     9
   
 ## Demo
 
-Here's a demonstration of vertically carving seams:
+Here's a demonstration of vertically carving seams. Notice how it carves around the Porsche 911, removing low-energy paths:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/49384703/146843024-f3e40187-f72e-43cb-8b32-b3fa738da04b.gif" width=400> 
 </p>
@@ -137,6 +134,18 @@ Finally, here's what a full demonstration looks like.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/49384703/146843044-55c62bd1-e1bc-4f1a-a811-46f304c1bfb5.gif" width=400> 
 </p>
+
+## More Examples
+Let's look at some more naive (crop) resizes vs CAIR.
+
+|         Input Image      |         Naive Resize      | CAIR    
+:-------------------------:|:-------------------------:|:-------------------------:|
+<img width="1000" height="250" src="https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png"> 
+<!-- 
+![750boat](https://user-images.githubusercontent.com/49384703/148001134-660aacb9-000d-4b6c-88a6-078f53f5e81c.png)
+![naive750boat](https://user-images.githubusercontent.com/49384703/148001138-25eb577d-d9e0-4a9b-8119-c8bcfd6c0202.png)
+![originalboat](https://user-images.githubusercontent.com/49384703/148001141-237ded52-ce41-47aa-8033-4b4db84990b6.png) -->
+
 
 ## Deployment
 
