@@ -159,9 +159,9 @@ Let's look at some more naive (crop) resizes vs CAIR.
 
 For visualization purposes, here are the above images overlaid with all the seams that were removed:
 
-|         Boat Sunset    |        Swimmer    | Austin, TX
+|         Boat Sunset    |        Surfer in Ocean    | Austin, Texas
 :-------------------------:|:-------------------------:|:-------------------------:|
-<img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png"> |  <img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139247-9fe91498-636a-4b20-85f6-00b39d96bd1d.png"> |  <img width="450" height="200" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png"> 
+<img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png"> |  <img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139247-9fe91498-636a-4b20-85f6-00b39d96bd1d.png"> |  <img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png"> 
 
 <!-- <img width="510" alt="austinseams" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png">
 <img width="744" alt="boatseams" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png">
