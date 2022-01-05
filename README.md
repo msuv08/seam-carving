@@ -3,9 +3,7 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![MATLAB](https://img.shields.io/badge/MATLAB-R2021a-orange)](https://www.mathworks.com/help/matlab/release-notes.html) [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
 
-This is a reimplementation of the seam-carving algorithm described in a 2007 ACM SIGGRAPH paper from S. Avidan and S. Amir. 
-
-## 🚧 Full README still under construction 🚧
+This is a reimplementation of the seam-carving algorithm described in a 2007 ACM SIGGRAPH paper from S. Avidan and S. Amir done entirely in MATLAB.
 
 ## License
 
@@ -15,10 +13,10 @@ This is a reimplementation of the seam-carving algorithm described in a 2007 ACM
 ## Features
 
 - [X] Resize an image both horizontally & vertically
-- [X] Use of dynamic programming in 8-connected pixel paths
+- [X] Dynamic programming in 8-connected pixel paths
 - [X] Sobel operator used for better gradient thresholding
-- [X] Multidirectional energy maps
-- [X] Live seam-by-seam carving output
+- [X] Multidirectional 'low-cost' energy maps
+- [X] Backtracking and seam-by-seam carving output
 
 ## How does it work?
 
@@ -109,13 +107,6 @@ M  =  [3]   8     9
 <div align = "center">
 <img width="450" src="https://user-images.githubusercontent.com/49384703/147892253-3f2c8bce-1c58-4ec1-b120-db9259994a65.png">
 </div>
-
-
-<!-- <img width="527" src="https://user-images.githubusercontent.com/49384703/146864610-8cc3668e-7af3-4645-93d3-2abc6d6fe389.png">
-<img width="886" src="https://user-images.githubusercontent.com/49384703/146864618-cf368c50-b0a2-4443-98b5-5b36dd9062f5.png">
-<img width="529" src="https://user-images.githubusercontent.com/49384703/146864622-9403dc23-3513-499d-b6e5-7bed8b2d3f2f.png">
-<img width="886" alt="vert" src="https://user-images.githubusercontent.com/49384703/146864626-e48aa5a6-398f-4ed7-8d51-21d9fb3985a9.png"> -->
-
   
 ## Demo
 
@@ -139,7 +130,9 @@ M  =  [3]   8     9
 </p>
 
 ## More Examples
-Let's look at some more naive (crop) resizes vs CAIR.
+Let's look at a few more naive (crop) resizes vs CAIR.
+
+<div align="center">
 
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
@@ -156,25 +149,37 @@ Let's look at some more naive (crop) resizes vs CAIR.
 |         Input Image      |         Naive Resize      | CAIR    
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img width="800" height="250" src="https://user-images.githubusercontent.com/49384703/148139327-9760c070-7480-4759-b0a9-c46850632cc1.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148131048-5d406603-43a0-4d1a-a57a-697c567c4646.png"> |  <img width="475" height="250" src="https://user-images.githubusercontent.com/49384703/148130791-8d045cfd-8618-4e27-bad4-7caf75df087d.png"> 
+  
+</div>
 
 For visualization purposes, here are the above images overlaid with all the seams that were removed:
+
+<div align="center">
 
 |         Boat Sunset    |        Surfer in Ocean    | Austin, Texas
 :-------------------------:|:-------------------------:|:-------------------------:|
 <img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png"> |  <img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139247-9fe91498-636a-4b20-85f6-00b39d96bd1d.png"> |  <img width="400" height="200" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png"> 
 
-<!-- <img width="510" alt="austinseams" src="https://user-images.githubusercontent.com/49384703/148139243-10e69543-9f86-4628-9527-6f5101838fc6.png">
-<img width="744" alt="boatseams" src="https://user-images.githubusercontent.com/49384703/148139245-31b3c195-92ca-4185-a16a-7586b9d98392.png">
-<img width="956" alt="waveseams" src="g"> -->
-
-<!-- <img width="509" alt="fullaustin" src="https://user-images.githubusercontent.com/49384703/148139327-9760c070-7480-4759-b0a9-c46850632cc1.png"> -->
+</div>
 
 ## Deployment
 
-To test this project run
+To test this project, first read in an image in MATLAB:
 
 ```MATLAB
->> /seam-carving/a1.m
+>> img = imread("imgname.jpg");
+```
+Then, use the `reduce_img_size(img, width, height)` function to change an image's dimensions:
+
+```MATLAB
+>> new_img = reduce_img_size(img, 400, 300);
+>> imshow(new_img);
+```
+To visualize the seams that were removed, use the `display_seams(rgb_img, vert, horiz)` function:
+
+```MATLAB
+>> seam_img = display_seams(img, 400, 300);
+>> imshow(seam_img);
 ```
 
 ## Acknowledgements
